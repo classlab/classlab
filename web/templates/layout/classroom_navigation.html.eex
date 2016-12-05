@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light navbar-fixed-top" style="left: 200px">
+<nav class="navbar navbar-light navbar-fixed-top" style="left: 220px">
   <%= if page(@conn)[:breadcrumb] do %>
     <div class="breadcrumb float-xs-left">
       <%= for {entry, index} <- Enum.with_index(page(@conn)[:breadcrumb]) do %>

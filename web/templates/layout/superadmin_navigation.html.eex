@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark navbar-fixed-top bg-danger" style="left: 200px">
+<nav class="navbar navbar-dark navbar-fixed-top bg-danger" style="left: 220px">
   <%= link (page(@conn)[:headline] || page(@conn)[:title]), to: superadmin_dashboard_path(@conn, :show), class: "navbar-brand" %>
 
   <ul class="nav navbar-nav float-xs-right">

@@ -1,6 +1,8 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}", name: "Classlab.org!" %></h2>
-  <p class="lead">A simple way<br />to share your knowledge.</p>
+<div class="card">
+  <div class="card-block pt-3">
+    <h2 class=""><%= gettext "Welcome to %{name}", name: "Classlab!" %></h2>
+    <p class="lead">A virtual classroom for workshops.</p>
+  </div>
 </div>
 
 <div class="card-deck-wrapper">

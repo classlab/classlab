@@ -7,6 +7,10 @@
 
 $bg-light-grey: #fcfcfc;
 
+.card {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+}
+
 .navbar-light {
   background: #fff;
     border-bottom: 1px solid #dbe2e8;

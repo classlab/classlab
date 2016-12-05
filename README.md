@@ -6,7 +6,7 @@
 [![Deps Status](https://beta.hexfaktor.org/badge/all/github/classlab/classlab.svg)](https://beta.hexfaktor.org/github/classlab/classlab)
 [![Inline docs](http://inch-ci.org/github/classlab/classlab.svg?=123)](http://inch-ci.org/github/classlab/classlab)
 
-Classlab is a virtual classroom for workshops.
+A virtual classroom for workshops.
 
 ## Installation
 
@@ -14,7 +14,7 @@ Classlab is a virtual classroom for workshops.
 
 * Elixir 1.3+
 * Node 6.0+
-* PostgreSQL
+* MySQL 5.6+
 
 To start the classlab app:
 
