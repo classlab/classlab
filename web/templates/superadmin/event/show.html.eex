@@ -1,0 +1,13 @@
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @event.name %>
+  </li>
+
+</ul>
+
+<div class="btn-toolbar">
+  <%= link "Edit", to: superadmin_event_path(@conn, :edit, @event), class: "btn btn-primary" %>
+  <%= link "Back", to: superadmin_event_path(@conn, :index), class: "btn btn-secondary" %>
+</div>

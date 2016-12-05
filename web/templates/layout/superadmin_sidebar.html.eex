@@ -10,5 +10,8 @@
     <%= content_tag :li, class: "nav-item #{if(@conn.path_info == ["superadmin", "users"], do: " active")}" do %>
       <%= link "Users", to: superadmin_user_path(@conn, :index), class: "nav-link" %>
     <% end %>
+    <%= content_tag :li, class: "nav-item #{if(@conn.path_info == ["superadmin", "events"], do: " active")}" do %>
+      <%= link "Events", to: superadmin_event_path(@conn, :index), class: "nav-link" %>
+    <% end %>
   </ul>
 </div>

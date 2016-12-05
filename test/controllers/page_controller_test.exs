@@ -3,7 +3,7 @@ defmodule Classlab.PageControllerTest do
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"
-    assert html_response(conn, 200) =~ "Welcome to Classlab.org"
+    assert html_response(conn, 200) =~ "Welcome to Classlab"
   end
 
   test "shows next public events and if attending", %{conn: conn} do

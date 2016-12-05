@@ -1,0 +1,15 @@
+<table class="table">
+  <tr>
+    <th>Name</th>
+
+    <th></th>
+  </tr>
+  <%= for event <- @events do %>
+    <tr>
+      <td><%= link event.name, to: superadmin_event_path(@conn, :show, event) %></td>
+      <td>
+        <%= link "Delete", to: superadmin_event_path(@conn, :delete, event), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-sm" %>
+      </td>
+    </tr>
+  <% end %>
+</table>

@@ -107,5 +107,6 @@ defmodule Classlab.Router do
     pipe_through [:browser, :superadmin] # Use the default browser stack
     resources "/", DashboardController, only: [:show], singleton: true
     resources "/users", UserController
+    resources "/events", EventController
   end
 end
