@@ -98,6 +98,14 @@
                   <td>
                     <%= if has_permission?(current_memberships(@conn), [1, 2]) do %>
                       <%= link "Cancel invitation", to: classroom_invitation_path(@conn, :delete, @event, invitation), method: :delete, data: [toggle: "modal", target: "baseModal"], class: "btn btn-outline-danger btn-sm" %>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Show link
+                        </button>
+                        <div class="dropdown-menu">
+                          <input onClick="this.select();" value="<%= membership_url(@conn, :new, @event.slug, invitation.invitation_token) %>" class="form-control" />
+                        </div>
+                      </div>
                     <% end %>
                   </td>
                 </tr>
