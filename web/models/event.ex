@@ -37,7 +37,7 @@ defmodule Classlab.Event do
   # Composable Queries
   def current_public(query) do
     from event in query,
-      where: event.ends_at < ^DateTime.now_utc(),
+      where: event.ends_at > ^DateTime.now_utc(),
       where: event.public == true
   end
 
