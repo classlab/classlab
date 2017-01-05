@@ -9,7 +9,7 @@ defmodule Classlab.EventController do
   def index(conn, _params) do
     events =
       Event
-      |> Event.next_public()
+      |> Event.current_public()
       |> Query.preload(:location)
       |> Repo.all()
 

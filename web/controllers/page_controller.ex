@@ -9,7 +9,7 @@ defmodule Classlab.PageController do
 
     events =
       Event
-      |> Event.next_public()
+      |> Event.current_public()
       |> Query.limit(5)
       |> Query.preload(:location)
       |> Repo.all()
