@@ -8,7 +8,7 @@ defmodule Classlab.InvitationMailer do
   def invitation_email(%Invitation{invitation_token: invitation_token, email: email, first_name: _first_name, last_name: _last_name, event: event}) do
     invite_url = membership_url(Endpoint, :new, event.slug, invitation_token)
 
-    new_email
+    new_email()
     |> to(email)
     |> from({Application.get_env(:classlab, Mailer)[:from_name], Application.get_env(:classlab, Mailer)[:from_email]})
     |> subject("Invitation to event #{event.name} #{invite_url}")

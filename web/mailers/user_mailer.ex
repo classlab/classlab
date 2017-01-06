@@ -8,7 +8,7 @@ defmodule Classlab.UserMailer do
   def token_email(%User{email: email, access_token: access_token}) do
     login_url = session_url(Endpoint, :show, access_token)
 
-    new_email
+    new_email()
     |> to(email)
     |> from({Application.get_env(:classlab, Mailer)[:from_name], Application.get_env(:classlab, Mailer)[:from_email]})
     |> subject("Your access token")
