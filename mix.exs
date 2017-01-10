@@ -23,7 +23,7 @@ defmodule Classlab.Mixfile do
   def application do
     [mod: {Classlab, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :bamboo, :bamboo_smtp, :quantum, :mariaex]]
+                    :phoenix_ecto, :bamboo, :bamboo_smtp, :quantum, :mariaex, :ecto]]
   end
 
   # Specifies which paths to compile per environment.
@@ -41,6 +41,7 @@ defmodule Classlab.Mixfile do
       {:cowboy, "~> 1.0"},
       {:credo, "~> 0.5.1", only: [:dev, :test]},
       {:earmark, "~> 1.0.2"},
+      {:ecto, "~> 2.1.1"},
       {:excoveralls, "~> 0.5", only: :test},
       {:mariaex, ">= 0.7.0"},
       {:ex_doc, "~> 0.13", only: :dev},
