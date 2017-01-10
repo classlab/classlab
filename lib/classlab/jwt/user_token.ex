@@ -13,7 +13,7 @@ defmodule Classlab.JWT.UserToken do
   def encode(%__MODULE__{} = params) do
     params
     |> Joken.token()
-    |> Joken.with_signer(Joken.hs256(jwt_secret))
+    |> Joken.with_signer(Joken.hs256(jwt_secret()))
     |> Joken.sign()
     |> Joken.get_compact()
   end
@@ -23,7 +23,7 @@ defmodule Classlab.JWT.UserToken do
     result =
       token
       |> Joken.token()
-      |> Joken.with_signer(Joken.hs256(jwt_secret))
+      |> Joken.with_signer(Joken.hs256(jwt_secret()))
       |> Joken.verify()
 
     case result do

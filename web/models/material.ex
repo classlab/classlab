@@ -13,7 +13,7 @@ defmodule Classlab.Material do
     field :title, :string
     field :unlocked_at, Calecto.DateTimeUTC
     field :url, :string
-    timestamps
+    timestamps()
 
     belongs_to :event, Classlab.Event
   end

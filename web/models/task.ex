@@ -14,7 +14,7 @@ defmodule Classlab.Task do
     field :position, :integer
     field :title, :string
     field :unlocked_at, Calecto.DateTimeUTC
-    timestamps
+    timestamps()
 
     belongs_to :event, Classlab.Event
   end
