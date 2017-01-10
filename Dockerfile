@@ -1,4 +1,4 @@
-FROM elixir:1.3.4-slim
+FROM elixir:1.4-slim
 
 RUN apt-get update && apt-get -y install \
         git make g++ wget curl build-essential locales python \

@@ -12,7 +12,7 @@ A virtual classroom for workshops.
 
 **Requirements**
 
-* Elixir 1.3+
+* Elixir 1.4+
 * Node 6.0+
 * MySQL 5.6+
 * wkhtmltopdf
