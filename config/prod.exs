@@ -21,7 +21,7 @@ config :classlab, Classlab.Endpoint,
   cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: get_env("SECRET_KEY_BASE") || Logger.info("Please set env variable SECRET_KEY_BASE"),
   check_origin: false,
-  debug_errors: "false",
+  debug_errors: false,
   server: true
 
 # Do not print debug messages in production
