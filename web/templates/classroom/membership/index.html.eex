@@ -20,13 +20,6 @@
       <%= if length(@memberships) == 0 do %>
         <div class="card-block text-xs-center">
           <h4 class="card-title">No attendees available</h4>
-          <%= if @event.public do %>
-            <p class="card-text">Share your event with others.</p>
-            <%= link "Invite people", to: classroom_invitation_path(@conn, :new, @event), class: "btn btn-outline-primary" %>
-          <% else %>
-            <p class="card-text">Make your event public to reach other poeple.</p>
-            <%= link "Make it public", to: classroom_event_path(@conn, :edit, @event), class: "btn btn-outline-primary" %>
-          <% end %>
         </div>
       <% else %>
         <table class="table table-hover">

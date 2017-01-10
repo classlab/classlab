@@ -8,7 +8,6 @@
   <table class="table table-hover">
     <thead>
       <tr class="row">
-        <th class="col-xs-1">Public</th>
         <th class="col-xs-8">Name</th>
         <th class="col-xs-2">Date</th>
         <th class="col-xs-1">&nbsp;</th>
@@ -17,7 +16,6 @@
     <tbody>
       <%= for membership <- @memberships do %>
         <tr class="row">
-          <td class="col-xs-1"><%= membership.event.public %></td>
           <td class="col-xs-8">
             <%= link membership.event.name, to: classroom_dashboard_path(@conn, :show, membership.event) %>
             <br>

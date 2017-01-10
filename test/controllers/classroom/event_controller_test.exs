@@ -2,8 +2,8 @@ defmodule Classlab.Classroom.EventControllerTest do
   alias Classlab.Event
   use Classlab.ConnCase
 
-  @valid_attrs Factory.params_for(:event) |> Map.take(~w[public name description starts_at ends_at timezone]a)
-  @invalid_attrs %{public: ""}
+  @valid_attrs Factory.params_for(:event) |> Map.take(~w[name description starts_at ends_at timezone]a)
+  @invalid_attrs %{name: ""}
   @form_field "event_name"
 
   setup %{conn: conn} do

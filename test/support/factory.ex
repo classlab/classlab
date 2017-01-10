@@ -12,7 +12,6 @@ defmodule Classlab.Factory do
 
   def event_factory do
     %Classlab.Event{
-      public: false,
       name: sequence(:name, &"My Event #{&1}"),
       slug: sequence(:slug, &"event-#{&1}"),
       description_markdown: "My awesome event!",

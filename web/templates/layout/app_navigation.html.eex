@@ -2,9 +2,6 @@
   <%= link "Classlab", to: page_path(@conn, :index), class: "navbar-brand" %>
 
   <ul class="nav navbar-nav">
-    <%= content_tag :li, class: "nav-item ml-2" do %>
-      <%= link "Events", to: event_path(@conn, :index), class: "nav-link #{if(Enum.at(@conn.path_info, 0) == "events", do: " active")}" %>
-    <% end %>
   </ul>
 
   <ul class="nav navbar-nav float-xs-right">

@@ -10,7 +10,6 @@ defmodule Classlab.Event do
   # Fields
   @derive {Phoenix.Param, key: :slug}
   schema "events" do
-    field :public, :boolean, default: false
     field :slug, :string
     field :name, :string
     field :description_markdown, :string
@@ -35,12 +34,6 @@ defmodule Classlab.Event do
   end
 
   # Composable Queries
-  def current_public(query) do
-    from event in query,
-      where: event.ends_at > ^DateTime.now_utc(),
-      where: event.public == true
-  end
-
   def as_role(query, %User{id: user_id}, role_id) do
     from event in query,
       left_join: membership in assoc(event, :memberships),
@@ -70,7 +63,7 @@ defmodule Classlab.Event do
   end
 
   # Changesets & Validations
-  @fields [:public, :name, :description_markdown, :invitation_token, :invitation_token_active,
+  @fields [:name, :description_markdown, :invitation_token, :invitation_token_active,
            :starts_at, :ends_at, :timezone, :before_email_subject, :before_email_body_text,
            :after_email_subject, :after_email_body_text]
   def changeset(struct, params \\ %{}) do
@@ -79,7 +72,7 @@ defmodule Classlab.Event do
     |> optional_cast_location(params[:location] || params["location"])
     |> generate_invitation_token()
     |> Slugger.generate_slug(:name, random: 100_000..999_999)
-    |> validate_required([:public, :slug, :name, :description_markdown, :invitation_token,
+    |> validate_required([:slug, :name, :description_markdown, :invitation_token,
          :invitation_token_active, :starts_at, :ends_at, :timezone])
     |> unique_constraint(:slug)
     |> unique_constraint(:invitation_token)

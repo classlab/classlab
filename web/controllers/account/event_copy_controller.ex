@@ -68,7 +68,6 @@ defmodule Classlab.Account.EventCopyController do
 
     changeset = Event.changeset(
       %Event{
-        public: false,
         description_markdown: event.description_markdown,
         starts_at: event.starts_at,
         ends_at: event.ends_at,
