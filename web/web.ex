@@ -19,7 +19,7 @@ defmodule Classlab.Web do
   def model do
     quote do
       use Ecto.Schema
-      use Calecto.Schema
+      @timestamps_opts [type: :utc_datetime, usec: false]
 
       import Ecto
       import Ecto.Changeset
