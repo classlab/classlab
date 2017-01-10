@@ -8,13 +8,14 @@
 
 A virtual classroom for workshops.
 
-## Installation
+## Local installation
 
 **Requirements**
 
 * Elixir 1.3+
 * Node 6.0+
 * MySQL 5.6+
+* wkhtmltopdf
 
 To start the classlab app:
 

@@ -30,9 +30,11 @@ config :logger, level: :info
 
 config :phoenix, :stacktrace_depth, 20
 
-
 # JWT secret for signing session token
 config :classlab, :jwt_secret, get_env("SECRET_KEY_BASE")
+
+# wkhtmltopdf
+config :classlab, wkhtmltopdf_bin_path: get_env("WKHTMLTOPDF_BIN_PATH") || "wkhtmltopdf"
 
 # SMTP configuration
 config :classlab, Classlab.Mailer,

@@ -29,6 +29,9 @@ config :quantum, cron: [
   "*/30 * * * *": {"Classlab.Jobs.MembershipAfterEventEmailJob", :perform_now}
 ]
 
+# wkhtmltopdf
+config :classlab, wkhtmltopdf_bin_path: "wkhtmltopdf"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
