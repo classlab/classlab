@@ -45,16 +45,16 @@ defmodule Classlab.Mixfile do
       {:mariaex, ">= 0.7.0"},
       {:ex_doc, "~> 0.13", only: :dev},
       {:ex_machina, "~> 1.0", only: :test},
-      {:gettext, "~> 0.12.1"},
+      {:gettext, "~> 0.13"},
       {:inch_ex, "~> 0.5", only: :docs},
       {:joken, "~> 1.3.1"},
       {:mix_test_watch, "~> 0.2", only: :dev},
       {:phoenix_ecto, "~> 3.0"},
       {:phoenix_html, "~> 2.6"},
-      {:phoenix_live_reload, "~> 1.0.5", only: :dev},
+      {:phoenix_live_reload, "~> 1.0.6", only: :dev},
       {:phoenix_pubsub, "~> 1.0"},
       {:phoenix, "~> 1.2.1"},
-      {:quantum, ">= 1.8.0"}
+      {:quantum, ">= 1.8.1"}
     ]
   end
 
