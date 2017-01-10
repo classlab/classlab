@@ -13,7 +13,7 @@ defmodule Classlab.Invitation do
     field :first_name, :string
     field :last_name, :string
     field :invitation_token, :string
-    field :completed_at, Calecto.DateTimeUTC
+    field :completed_at, :utc_datetime
     timestamps()
 
     belongs_to :event, Classlab.Event

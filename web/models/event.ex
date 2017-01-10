@@ -19,8 +19,8 @@ defmodule Classlab.Event do
     field :before_email_body_text, :string
     field :after_email_subject, :string
     field :after_email_body_text, :string
-    field :starts_at, Calecto.DateTimeUTC
-    field :ends_at, Calecto.DateTimeUTC
+    field :starts_at, :utc_datetime
+    field :ends_at, :utc_datetime
     field :timezone, :string
     timestamps()
 

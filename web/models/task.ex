@@ -13,7 +13,7 @@ defmodule Classlab.Task do
     field :hint_markdown, :string
     field :position, :integer
     field :title, :string
-    field :unlocked_at, Calecto.DateTimeUTC
+    field :unlocked_at, :utc_datetime
     timestamps()
 
     belongs_to :event, Classlab.Event

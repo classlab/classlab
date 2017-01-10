@@ -12,8 +12,8 @@ defmodule Classlab.Membership do
   schema "memberships" do
     field :seat_position_x, :integer, default: 0
     field :seat_position_y, :integer, default: 0
-    field :before_email_sent_at, Calecto.DateTimeUTC
-    field :after_email_sent_at, Calecto.DateTimeUTC
+    field :before_email_sent_at, :utc_datetime
+    field :after_email_sent_at, :utc_datetime
     timestamps()
 
     belongs_to :event, Classlab.Event

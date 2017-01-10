@@ -11,7 +11,7 @@ defmodule Classlab.Material do
     field :description_markdown, :string
     field :position, :integer
     field :title, :string
-    field :unlocked_at, Calecto.DateTimeUTC
+    field :unlocked_at, :utc_datetime
     field :url, :string
     timestamps()
 
