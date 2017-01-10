@@ -59,7 +59,8 @@ config :classlab, Classlab.Repo,
   password: get_env("DATABASE_MYSQL_PASSWORD") || "",
   database: get_env("DATABASE_MYSQL_DATABASE") || "classlab_prod",
   hostname: get_env("DATABASE_MYSQL_HOSTNAME") || "localhost",
-  pool_size: get_env("DATABASE_MYSQL_POOLSIZE") || 20
+  pool_size: get_env("DATABASE_MYSQL_POOLSIZE") || 20,
+  ssl: true
 
 # Google Analytics
 config :classlab, :google_analytics,
