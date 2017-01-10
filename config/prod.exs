@@ -60,7 +60,12 @@ config :classlab, Classlab.Repo,
   database: get_env("DATABASE_MYSQL_DATABASE") || "classlab_prod",
   hostname: get_env("DATABASE_MYSQL_HOSTNAME") || "localhost",
   pool_size: get_env("DATABASE_MYSQL_POOLSIZE") || 20,
-  ssl: true
+  ssl: true,
+  ssl_opts: [
+    certfile: get_env("DATABASE_SSL_CLIENT_CERT_PATH") || Logger.info("Please set env variable DATABASE_SSL_CLIENT_CERT_PATH"),
+    key_file: get_env("DATABASE_SSL_CLIENT_KEY_PATH") || Logger.info("Please set env variable DATABASE_SSL_CLIENT_KEY_PATH"),
+    cacertfile: get_env("DATABASE_SSL_SERVER_CA_PATH") || Logger.info("Please set env variable DATABASE_SSL_SERVER_CA_PATH")
+  ]
 
 # Google Analytics
 config :classlab, :google_analytics,
