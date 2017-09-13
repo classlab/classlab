@@ -47,4 +47,4 @@ build: `docker build -t classlab .`
 
 ## License
 
-MIT © Symetics GmbH
+MIT © Workshops Europe GmbH
